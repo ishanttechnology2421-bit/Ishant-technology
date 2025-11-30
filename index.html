@@ -105,7 +105,9 @@
             font-size: 14px;
         }
 
-        form input, form select, form textarea {
+        form input,
+        form select,
+        form textarea {
             width: 100%;
             padding: 8px;
             border-radius: 6px;
@@ -302,9 +304,6 @@
         <!-- HOME TAB (Welcome + Form) -->
         <div id="tab-home" class="card tab-content">
             <h2>श्रमिक पंजीकरण फॉर्म</h2>
-            <p class="subtitle">
-                यहाँ पर आप श्रमिक पंजीकरण फॉर्म भर सकते हैं। आपका डेटा सीधे Google Sheet डेटाबेस में सेव हो जाएगा।
-            </p>
 
             <div class="info-box">
                 <b>सूचना :</b> श्रमिक पंजीकरण आवेदन होने के बाद आपको तुरंत संपर्क किया जाएगा।  
@@ -331,6 +330,9 @@
                     <div class="form-group">
                         <label for="mobile">मोबाइल नंबर (श्रमिक) *</label>
                         <input type="tel" id="mobile" name="mobile" required>
+                        <small style="font-size:11px; color:#555;">
+                            श्रमिक के आधार रजिस्टर्ड मोबाइल नंबर पर ओटीपी जाएगी।
+                        </small>
                         <div id="mobileStatus" class="status-text"></div>
                     </div>
                     <div class="form-group">
@@ -368,10 +370,19 @@
                     </div>
                 </div>
 
+                <!-- Pincode + Post + Panchayat + Address -->
                 <div class="form-row">
                     <div class="form-group">
                         <label for="pincode">पिन कोड *</label>
                         <input type="text" id="pincode" name="pincode" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="post">Post *</label>
+                        <input type="text" id="post" name="post" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="panchayat">पंचायत *</label>
+                        <input type="text" id="panchayat" name="panchayat" required>
                     </div>
                     <div class="form-group" style="flex: 2;">
                         <label for="address">पूरा पता *</label>
@@ -379,10 +390,23 @@
                     </div>
                 </div>
 
+                <!-- Applicant details -->
                 <div class="form-row">
                     <div class="form-group">
                         <label for="applicantName">आवेदक का नाम *</label>
-                        <input type="text" id="applicantName" name="applicantName" required>
+                        <select id="applicantName" name="applicantName" required>
+                            <option value="">आवेदक चुनें</option>
+                            <option value="राजू">राजू</option>
+                            <option value="रमन">रमन</option>
+                            <option value="अमन">अमन</option>
+                            <option value="अजय">अजय</option>
+                            <option value="अभिषेक">अभिषेक</option>
+                            <option value="सुरेंद्र कुमार">सुरेंद्र कुमार</option>
+                            <option value="राम कैलाश">राम कैलाश</option>
+                            <option value="आशा बहु मैलारायगंज">आशा बहु मैलारायगंज</option>
+                            <option value="संतोष BC">संतोष BC</option>
+                            <option value="फारुख BC">फारुख BC</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="applicantMobile">आवेदक का मोबाइल नंबर *</label>
@@ -497,6 +521,8 @@
                         <th>तहसील</th>
                         <th>ब्लॉक</th>
                         <th>पिन कोड</th>
+                        <th>Post</th>
+                        <th>पंचायत</th>
                         <th>पूरा पता</th>
                         <th>आवेदक नाम</th>
                         <th>आवेदक मोबाइल</th>
@@ -528,38 +554,5 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        // 👉 आपका नया Google Apps Script Web App URL
-        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzJCxbRDPX2rNULHZcvC8bw7EVaMnEJRKcydLY-1YnwH9R2Ur79M26Ta0m1Vc4IS_L_Ng/exec";
-
-        // सिर्फ रेफरेंस के लिए ID अलग से (जरूरत पड़े तो Apps Script के अंदर use कर सकते हैं)
-        const SCRIPT_DEPLOYMENT_ID = "AKfycbzJCxbRDPX2rNULHZcvC8bw7EVaMnEJRKcydLY-1YnwH9R2Ur79M26Ta0m1Vc4IS_L_Ng";
-
-        let shramikData = [];
-
-        // TAB HANDLING
-        const tabLinks = document.querySelectorAll('.tab-link');
-        const tabContents = document.querySelectorAll('.tab-content');
-
-        function showTab(tabName) {
-            tabLinks.forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.tab === tabName);
-            });
-            tabContents.forEach(card => {
-                card.style.display = card.id === 'tab-' + tabName ? 'block' : 'none';
-            });
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        tabLinks.forEach(btn => {
-            btn.addEventListener('click', () => {
-                showTab(btn.dataset.tab);
-            });
-        });
-
-        // WHATSAPP FLOAT
-        const waMainBtn = document.getElementById('waMainBtn');
-        const waPopup = document.getElementById('waPopup');
-        const waClose = document.getElementById('waClose');
-
-        waMainBtn.addEventListener('click', () => {
-            waPopup.style.display = waPopup.style.display === 'block' ? 'none'
+        // नया Google Apps Script Web App URL
+    
