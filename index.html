@@ -2,23 +2,14 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>ISHANT Technology - Shramik Portal</title>
+    <title>व्यक्ति पंजीकरण पोर्टल - ISHANT Technology</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
 
-        body {
-            background: #f0f4ff;
-            color: #333;
-        }
+        body { background: #f0f4ff; color: #333; }
 
-        /* TOP BAR */
         .topbar {
             background: linear-gradient(90deg, #1565c0, #1e88e5);
             color: #fff;
@@ -29,55 +20,13 @@
         }
 
         .logo-circle {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: #fff;
-            color: #1565c0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 36px; height: 36px; border-radius: 50%;
+            background: #fff; color: #1565c0;
+            display: flex; align-items: center; justify-content: center;
             font-weight: bold;
         }
 
-        .brand-text {
-            font-size: 18px;
-            font-weight: 600;
-        }
-
-        /* NAV TABS */
-        .nav-tabs {
-            background: #1976d2;
-            padding: 0 16px;
-        }
-
-        .nav-tabs-inner {
-            display: flex;
-            gap: 8px;
-            overflow-x: auto;
-        }
-
-        .tab-link {
-            border: none;
-            background: transparent;
-            color: #e3f2fd;
-            padding: 10px 14px;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        .tab-link.active {
-            background: #0d47a1;
-            border-radius: 6px 6px 0 0;
-            color: #fff;
-        }
-
-        /* PAGE BODY */
-        .page {
-            max-width: 960px;
-            margin: 16px auto 40px;
-            padding: 0 12px;
-        }
+        .page { max-width: 960px; margin: 16px auto 40px; padding: 0 12px; }
 
         .card {
             background: #fff;
@@ -87,63 +36,7 @@
             margin-top: 8px;
         }
 
-        .card h2 {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-
-        .subtitle {
-            font-size: 13px;
-            color: #555;
-            margin-bottom: 12px;
-        }
-
-        /* FORM */
-        form label {
-            display: block;
-            margin: 8px 0 4px;
-            font-size: 14px;
-        }
-
-        form input,
-        form select,
-        form textarea {
-            width: 100%;
-            padding: 8px;
-            border-radius: 6px;
-            border: 1px solid #c5cae9;
-            font-size: 14px;
-        }
-
-        form textarea {
-            resize: vertical;
-        }
-
-        .form-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .form-group {
-            flex: 1;
-            min-width: 180px;
-        }
-
-        .btn {
-            background: #1976d2;
-            color: #fff;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 14px;
-            margin-top: 12px;
-        }
-
-        .btn:hover {
-            background: #0d47a1;
-        }
+        .card h2 { font-size: 20px; margin-bottom: 8px; }
 
         .info-box {
             background: #fff8e1;
@@ -153,406 +46,500 @@
             margin-bottom: 12px;
         }
 
-        .status-text {
-            font-size: 12px;
-            margin-top: 3px;
-        }
-        .status-text.error { color: #c62828; }
-        .status-text.ok    { color: #2e7d32; }
+        form label { display: block; margin: 8px 0 4px; font-size: 14px; }
 
-        /* SIMPLE TEXT LISTS */
-        .list-item {
+        form input, form select, form textarea {
+            width: 100%; padding: 8px;
+            border-radius: 6px; border: 1px solid #c5cae9;
             font-size: 14px;
-            margin-bottom: 6px;
         }
-        .highlight { font-weight: bold; }
 
-        /* TABLE */
+        .form-row { display: flex; flex-wrap: wrap; gap: 10px; }
+
+        .form-group { flex: 1; min-width: 180px; }
+
+        .btn {
+            background: #1976d2; color: #fff;
+            border: none; padding: 10px 18px;
+            border-radius: 20px; cursor: pointer; font-size: 14px;
+            margin-top: 12px;
+        }
+
+        .btn-tab {
+            border-radius: 20px;
+            border: 1px solid #1565c0;
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 8px 14px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .btn-tab.active {
+            background: #1565c0;
+            color: #fff;
+        }
+
+        .wa-btn {
+            display:block;
+            margin-top:12px;
+            background:#25D366;
+            color:#fff;
+            padding:10px 18px;
+            text-align:center;
+            border-radius:20px;
+            text-decoration:none;
+            font-size:14px;
+            cursor:pointer;
+        }
+
+        .wa-btn.loading {
+            opacity: 0.7;
+            background:#128C7E;
+        }
+
+        .error-text {
+            color: red;
+            font-size: 12px;
+            margin-top: 2px;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 12px;
             margin-top: 10px;
+            font-size: 13px;
         }
+
         th, td {
-            border: 1px solid #e0e0e0;
-            padding: 5px;
+            border: 1px solid #cfd8dc;
+            padding: 6px 8px;
             text-align: left;
         }
+
         th {
             background: #e3f2fd;
-        }
-        .check-cell, .delete-cell {
-            text-align: center;
+            font-weight: bold;
         }
 
-        .del-btn {
-            border: none;
-            background: #e53935;
-            color: #fff;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 11px;
-            cursor: pointer;
-        }
-        .del-btn:hover {
-            background: #b71c1c;
+        tbody tr:nth-child(even) {
+            background: #f5f5f5;
         }
 
-        /* WHATSAPP FLOATING BUTTON */
-        .wa-float {
-            position: fixed;
-            right: 16px;
-            bottom: 20px;
-            z-index: 200;
-        }
-
-        .wa-main-btn {
-            background: #25d366;
-            color: #fff;
-            border: none;
-            padding: 10px 16px;
-            border-radius: 24px;
-            font-size: 14px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-            cursor: pointer;
-        }
-
-        .wa-popup {
-            position: absolute;
-            right: 0;
-            bottom: 46px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-            padding: 8px;
-            width: 210px;
-            display: none;
-        }
-
-        .wa-popup-header {
-            font-size: 13px;
-            margin-bottom: 6px;
-        }
-
-        .wa-number-btn {
-            width: 100%;
-            border: none;
-            background: #e8f5e9;
-            padding: 6px 8px;
-            border-radius: 6px;
-            margin-bottom: 6px;
-            font-size: 13px;
-            text-align: left;
-            cursor: pointer;
-        }
-
-        .wa-number-btn:hover {
-            background: #c8e6c9;
-        }
-
-        .wa-close {
+        .small {
             font-size: 12px;
-            text-align: center;
-            cursor: pointer;
             color: #555;
         }
 
-        /* FOOTER */
-        .footer {
-            text-align: center;
-            font-size: 12px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .form-message {
-            font-size: 12px;
-            margin-top: 6px;
-        }
-        .form-message.ok { color: #2e7d32; }
-        .form-message.error { color: #c62828; }
-
-        @media (max-width: 600px) {
-            .brand-text { font-size: 16px; }
-            .tab-link { font-size: 13px; padding: 8px 10px; }
+        .tabs-row {
+            display:flex;
+            gap:10px;
+            margin-top:12px;
+            margin-bottom:4px;
+            flex-wrap:wrap;
         }
     </style>
 </head>
+
 <body>
 
-    <!-- TOP BAR -->
     <div class="topbar">
         <div class="logo-circle">IT</div>
-        <div class="brand-text">Ishant Technology - श्रमिक पंजीकरण पोर्टल</div>
-    </div>
-
-    <!-- NAV TABS -->
-    <div class="nav-tabs">
-        <div class="nav-tabs-inner">
-            <button class="tab-link active" data-tab="home">Home</button>
-            <button class="tab-link" data-tab="services">Services</button>
-            <button class="tab-link" data-tab="schemes">Schemes</button>
-            <button class="tab-link" data-tab="about">About</button>
-            <button class="tab-link" data-tab="contact">Contact</button>
-            <button class="tab-link" data-tab="list">List</button>
-        </div>
+        <div>यह पोर्टल इशांत टेक्नोलॉजी की तरफ से दिया जा रहा है।</div>
     </div>
 
     <div class="page">
 
-        <!-- HOME TAB (Welcome + Form) -->
-        <div id="tab-home" class="card tab-content">
-            <h2>श्रमिक पंजीकरण फॉर्म</h2>
+        <!-- Tabs -->
+        <div class="tabs-row">
+            <button id="tabForm" class="btn-tab active" onclick="showSection('formSection')">
+                व्यक्ति पंजीकरण
+            </button>
+            <button id="tabList" class="btn-tab" onclick="showSection('listSection')">
+                पंजीकरण की सूची
+            </button>
+        </div>
 
-            <div class="info-box">
-                <b>सूचना :</b> श्रमिक पंजीकरण आवेदन होने के बाद आपको तुरंत संपर्क किया जाएगा।  
-                यदि श्रमिक पंजीकरण का पेमेंट नहीं देते हैं तो पंजीकरण निरस्त कर दिया जाएगा और भविष्य में दोबारा पंजीकरण नहीं हो सकेगा।
-            </div>
+        <!-- SECTION 1: व्यक्ति पंजीकरण -->
+        <div id="formSection" style="display:block;">
+            <div class="card">
+                <h2>व्यक्ति पंजीकरण फ़ॉर्म</h2>
 
-            <form id="shramikForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="workerName">श्रमिक नाम *</label>
-                        <input type="text" id="workerName" name="workerName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="dob">जन्म तिथि *</label>
-                        <input type="date" id="dob" name="dob" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="aadhaar">आधार नंबर *</label>
-                        <input type="text" id="aadhaar" name="aadhaar" required>
-                    </div>
+                <div class="info-box">
+                    <b>सूचना :</b> पंजीकरण के बाद जल्द ही संपर्क किया जाएगा।
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="mobile">मोबाइल नंबर (श्रमिक) *</label>
-                        <input type="tel" id="mobile" name="mobile" required>
-                        <small style="font-size:11px; color:#555;">
-                            श्रमिक के आधार रजिस्टर्ड मोबाइल नंबर पर ओटीपी जाएगी।
-                        </small>
-                        <div id="mobileStatus" class="status-text"></div>
+                <form id="vyaktiForm">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>व्यक्ति का नाम *</label>
+                            <input type="text" id="workerName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>जन्म तिथि *</label>
+                            <input type="date" id="dob" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>आधार नंबर *</label>
+                            <input type="text"
+                                   id="aadhaar"
+                                   maxlength="12"
+                                   placeholder="आपके आधार से रजिस्टर्ड मोबाइल नंबर पर जल्द ही ओटीपी भेजी जाएगी।"
+                                   oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,12);"
+                                   required>
+                            <small id="aadhaarMsg" class="error-text"></small>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="tehsil">तहसील *</label>
-                        <select id="tehsil" name="tehsil" required>
-                            <option value="">तहसील चुनें</option>
-                            <option value="नवाबगंज">नवाबगंज</option>
-                            <option value="फतेहपुर">फतेहपुर</option>
-                            <option value="रामसनेहीघाट">रामसनेहीघाट</option>
-                            <option value="हैदरगढ़">हैदरगढ़</option>
-                            <option value="रामनगर">रामनगर</option>
-                            <option value="सिरौली">सिरौली</option>
-                        </select>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>मोबाइल नंबर *</label>
+                            <input type="tel"
+                                   id="mobile"
+                                   maxlength="10"
+                                   oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10);"
+                                   required>
+                            <small id="mobileMsg" class="error-text"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>तहसील *</label>
+                            <select id="tehsil" required>
+                                <option value="">तहसील चुनें</option>
+                                <option>नवाबगंज</option>
+                                <option>फतेहपुर</option>
+                                <option>रामसनेहीघाट</option>
+                                <option>हैदरगढ़</option>
+                                <option>रामनगर</option>
+                                <option>सिरौली</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>ब्लॉक *</label>
+                            <select id="block" required>
+                                <option value="">ब्लॉक चुनें</option>
+                                <option>बंकी</option>
+                                <option>मसौली</option>
+                                <option>देवा</option>
+                                <option>हरख</option>
+                                <option>फतेहपुर</option>
+                                <option>हैदरगढ़</option>
+                                <option>दरियाबाद</option>
+                                <option>सूरतगंज</option>
+                                <option>सिद्धौर</option>
+                                <option>पूरे डलई</option>
+                                <option>निन्दूरा</option>
+                                <option>त्रिवेदीगंज</option>
+                                <option>रामनगर</option>
+                                <option>सिरौली ग़ौसपुर</option>
+                                <option>बनीकोडर</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="block">ब्लॉक *</label>
-                        <select id="block" name="block" required>
-                            <option value="">ब्लॉक चुनें</option>
-                            <option value="बंकी">बंकी</option>
-                            <option value="मसौली">मसौली</option>
-                            <option value="देवा">देवा</option>
-                            <option value="हरख">हरख</option>
-                            <option value="फतेहपुर">फतेहपुर</option>
-                            <option value="हैदरगढ़">हैदरगढ़</option>
-                            <option value="दरियाबाद">दरियाबाद</option>
-                            <option value="सूरतगंज">सूरतगंज</option>
-                            <option value="सिद्धौर">सिद्धौर</option>
-                            <option value="पूरे डलई">पूरे डलई</option>
-                            <option value="निन्दूरा">निन्दूरा</option>
-                            <option value="त्रिवेदीगंज">त्रिवेदीगंज</option>
-                            <option value="रामनगर">रामनगर</option>
-                            <option value="सिरौली ग़ौसपुर">सिरौली ग़ौसपुर</option>
-                            <option value="बनीकोडर">बनीकोडर</option>
-                        </select>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>पिन कोड *</label>
+                            <input type="text"
+                                   id="pincode"
+                                   required
+                                   maxlength="6"
+                                   oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,6);">
+                        </div>
+
+                        <div class="form-group">
+                            <label>पोस्ट *</label>
+                            <input type="text" id="post" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>पंचायत *</label>
+                            <input type="text" id="panchayat" required>
+                        </div>
+
+                        <div class="form-group" style="flex:2;">
+                            <label>पूरा पता *</label>
+                            <textarea id="address" rows="3" required></textarea>
+                        </div>
                     </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>आवेदक का नाम *</label>
+                            <input type="text"
+                                   id="applicantName"
+                                   placeholder="ASHA / AWW / BC / PANCHAYAT SAHAYAK / OTHER"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>आवेदक मोबाइल नंबर *</label>
+                            <input type="tel"
+                                   id="applicantMobile"
+                                   maxlength="10"
+                                   oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10);"
+                                   required>
+                        </div>
+                    </div>
+
+                    <button class="btn" type="submit">पंजीकरण सबमिट करें</button>
+
+                    <a id="wa1" class="wa-btn">WhatsApp पर भेजें (9454238343)</a>
+                    <a id="wa2" class="wa-btn">WhatsApp पर भेजें (9569615494)</a>
+
+                </form>
+            </div>
+        </div>
+
+        <!-- SECTION 2: पंजीकरण की सूची -->
+        <div id="listSection" style="display:none;">
+            <div class="card">
+                <h2>पंजीकरण की सूची</h2>
+                <div class="info-box small">
+                    यह लिस्ट आपके Google Sheet से ऑटोमैटिक आएगी।
                 </div>
 
-                <!-- Pincode + Post + Panchayat + Address -->
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="pincode">पिन कोड *</label>
-                        <input type="text" id="pincode" name="pincode" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="post">Post *</label>
-                        <input type="text" id="post" name="post" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="panchayat">पंचायत *</label>
-                        <input type="text" id="panchayat" name="panchayat" required>
-                    </div>
-                    <div class="form-group" style="flex: 2;">
-                        <label for="address">पूरा पता *</label>
-                        <textarea id="address" name="address" rows="3" required></textarea>
-                    </div>
+                <button class="btn" type="button" onclick="loadListFromSheet()">लिस्ट लोड करें</button>
+
+                <div style="overflow-x:auto;">
+                    <table id="listTable">
+                        <thead>
+                            <tr>
+                                <th>क्रम सं.</th>
+                                <th>व्यक्ति का नाम</th>
+                                <th>DOB</th>
+                                <th>आधार नंबर</th>
+                                <th>मोबाइल नंबर</th>
+                                <th>पता</th>
+                                <th>आवेदक का नाम</th>
+                                <th>आवेदक मोबाइल</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- डेटा JS से आएगा -->
+                        </tbody>
+                    </table>
                 </div>
-
-                <!-- Applicant details -->
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="applicantName">आवेदक का नाम *</label>
-                        <select id="applicantName" name="applicantName" required>
-                            <option value="">आवेदक चुनें</option>
-                            <option value="राजू">राजू</option>
-                            <option value="रमन">रमन</option>
-                            <option value="अमन">अमन</option>
-                            <option value="अजय">अजय</option>
-                            <option value="अभिषेक">अभिषेक</option>
-                            <option value="सुरेंद्र कुमार">सुरेंद्र कुमार</option>
-                            <option value="राम कैलाश">राम कैलाश</option>
-                            <option value="आशा बहु मैलारायगंज">आशा बहु मैलारायगंज</option>
-                            <option value="संतोष BC">संतोष BC</option>
-                            <option value="फारुख BC">फारुख BC</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="applicantMobile">आवेदक का मोबाइल नंबर *</label>
-                        <input type="tel" id="applicantMobile" name="applicantMobile" required>
-                    </div>
-                </div>
-
-                <button type="submit" class="btn" id="submitBtn">पंजीकरण सेव करें</button>
-                <div id="formMessage" class="form-message"></div>
-            </form>
-        </div>
-
-        <!-- SERVICES TAB -->
-        <div id="tab-services" class="card tab-content" style="display:none;">
-            <h2>हमारी डिजिटल सेवाएं</h2>
-            <p class="subtitle">ISHANT Technology द्वारा दी जाने वाली मुख्य डिजिटल सेवाएं:</p>
-
-            <div class="list-item">⏩ आधार मोबाइल नंबर यू <span class="highlight">(WITHOUT OTP &amp; FINGERPRINT)</span></div>
-            <div class="list-item">⏩ आधार एड्रेस अपडेट <span class="highlight">NEED AADHAR OTP</span></div>
-            <div class="list-item">⏩ आधार नंबर से <span class="highlight">PAN NUMBER</span></div>
-            <div class="list-item">⏩ आधार नंबर से <span class="highlight">RASAN CARD</span></div>
-            <div class="list-item">⏩ आधार नंबर से <span class="highlight">AADHAR PDF</span></div>
-            <div class="list-item">⏩ जन्म प्रमाण पत्र</div>
-            <div class="list-item">⏩ राशन कार्ड न से आधार नंबर</div>
-
-            <h3 style="margin-top:16px; font-size:16px;">श्रमिक कार्ड से संबंधित सेवाएं</h3>
-            <div class="list-item">✅ नया कार्ड बनवाना ₹100 (1 वर्ष)</div>
-            <div class="list-item">✅ रिनिवल जमा करना बिना ओटीपी या ओटीपी से</div>
-            <div class="list-item">✅ रिनिवल में पेनल्टी हटाना</div>
-            <div class="list-item">✅ आधार वेरिफिकेशन पेंडिंग हटवाना</div>
-            <div class="list-item">✅ श्रमिक कार्ड में मोबाइल नंबर लगवाना</div>
-            <div class="list-item">✅ योजना आवेदन करना</div>
-        </div>
-
-        <!-- SCHEMES TAB -->
-        <div id="tab-schemes" class="card tab-content" style="display:none;">
-            <h2>श्रमिक कार्ड की मुख्य योजनाएं</h2>
-            <p class="subtitle">लेबर कार्ड / श्रमिक कार्ड धारकों के लिए प्रमुख लाभ:</p>
-
-            <div class="list-item">
-                ⏩ बेटे के जन्म होने पर लगभग <span class="highlight">₹26,000</span> का अनुदान दिया जाता है।
             </div>
-
-            <div class="list-item">
-                ⏩ बेटी के जन्म होने पर लगभग <span class="highlight">₹31,000</span> का अनुदान  
-                एवं लगभग <span class="highlight">₹25,000</span> की अतिरिक्त सहायता दी जाती है।
-            </div>
-
-            <div class="list-item" style="margin-top:6px;">
-                <span class="highlight">यदि श्रमिक महिला है</span> तो ऊपर दी गई योजनाओं के साथ  
-                लगभग <span class="highlight">3 महीने की मजदूरी (₹20,000 से ₹25,000 तक)</span> अलग से दी जाती है।
-            </div>
-
-            <div class="list-item" style="margin-top:10px;">
-                ⏩ श्रमिक की पुत्री की शादी हेतु <span class="highlight">कन्या विवाह योजना</span> के अंतर्गत  
-                श्रम विभाग की ओर से लगभग <span class="highlight">₹65,000</span> की अनुदान राशि दी जाती है।
-            </div>
-
-            <div class="list-item" style="margin-top:10px;">
-                ⏩ <span class="highlight">संत रविदास शिक्षा योजना</span> के तहत यदि श्रमिक की संतान  
-                कक्षा <span class="highlight">9, 10, 11, 12</span> में पढ़ रही है तो  
-                लगभग <span class="highlight">₹4,500</span> की साइकिल सब्सिडी  
-                एवं कुछ राशि छात्रवृत्ति के रूप में दी जाती है।
-            </div>
-
-            <p style="font-size:12px; margin-top:12px; color:#555;">
-                नोट: सभी योजनाएं शासन/श्रम विभाग की वर्तमान नियमावली और पात्रता के अनुसार लागू होती हैं।
-            </p>
         </div>
 
-        <!-- ABOUT TAB -->
-        <div id="tab-about" class="card tab-content" style="display:none;">
-            <h2>About</h2>
-            <p class="subtitle">ISHANT Technology / जन सेवा केंद्र के बारे में जानकारी:</p>
-            <p style="font-size:14px; line-height:1.6;">
-                मेरा नाम <b>कुलदीप कुमार सिंह</b> है और मैं एक डिजिटल सर्विसेज प्रोवाइडर हूँ  
-                (जन सेवा केंद्र संचालक)। मैं ऐसी अनेक ऑनलाइन और ऑफलाइन सेवाएँ प्रदान करता हूँ  
-                जो हर जन सेवा केंद्र पर उपलब्ध नहीं होतीं। हमारा लक्ष्य है कि  
-                <b>कम से कम शुल्क पर, तेज और सही सेवा</b> हर ज़रूरतमंद तक पहुँचे।
-            </p>
-        </div>
+    </div> <!-- .page -->
 
-        <!-- CONTACT TAB -->
-        <div id="tab-contact" class="card tab-content" style="display:none;">
-            <h2>Contact</h2>
-            <p class="subtitle">संपर्क केवल WhatsApp के माध्यम से:</p>
+<script>
+/*
+   Sheet URL (सिर्फ जानकारी के लिए):
+   https://docs.google.com/spreadsheets/d/1V3-C-JIb7kurPuQVZeNX67Hs09BQk5jS1ZLA6OhVLTE/edit
+*/
 
-            <p class="list-item">📲 WhatsApp: <b>9454238343</b></p>
-            <p class="list-item">📲 WhatsApp: <b>9569615494</b></p>
+/* --------- IMPORTANT URLs ---------- */
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxAqUQ5lwlQ5SMFjbnEnkOOI4lbB6Df0_HPhZGaYAR0ks1FZKL1JsMBmOQC9z9xSpBl/exec";
+/* Apps Script का doGet() CSV दे रहा है, इसलिए उसी URL को हम list के लिए भी यूज़ कर रहे हैं */
+const SHEET_CSV_URL = SCRIPT_URL;
 
-            <p style="font-size:13px; margin-top:8px;">
-                किसी भी श्रमिक पंजीकरण या डिजिटल सेवा के लिए ऊपर दिए गए नंबरों पर  
-                WhatsApp संदेश भेजें। कॉल की बजाय केवल WhatsApp पर ही संपर्क किया जाए।
-            </p>
-        </div>
+/* ------- TABS / SECTION SWITCH ------- */
+function showSection(sectionId) {
+    document.getElementById("formSection").style.display = "none";
+    document.getElementById("listSection").style.display = "none";
 
-        <!-- LIST TAB -->
-        <div id="tab-list" class="card tab-content" style="display:none;">
-            <h2>श्रमिक पंजीकरण सूची</h2>
-            <p class="subtitle">
-                नीचे इस ब्राउज़र से किए गए श्रमिक पंजीकरण की सूची दिखाई जाएगी।
-            </p>
+    document.getElementById(sectionId).style.display = "block";
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>क्रम</th>
-                        <th>श्रमिक नाम</th>
-                        <th>जन्म तिथि</th>
-                        <th>आधार नं</th>
-                        <th>मोबाइल नं</th>
-                        <th>तहसील</th>
-                        <th>ब्लॉक</th>
-                        <th>पिन कोड</th>
-                        <th>Post</th>
-                        <th>पंचायत</th>
-                        <th>पूरा पता</th>
-                        <th>आवेदक नाम</th>
-                        <th>आवेदक मोबाइल</th>
-                        <th>चेक</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody id="dataBody">
-                    <!-- JS से rows आएंगी -->
-                </tbody>
-            </table>
-        </div>
+    document.getElementById("tabForm").classList.remove("active");
+    document.getElementById("tabList").classList.remove("active");
 
-        <div class="footer">
-            © 2025 Ishant Technology. All rights reserved.
-        </div>
-    </div>
+    if (sectionId === "formSection") {
+        document.getElementById("tabForm").classList.add("active");
+    } else {
+        document.getElementById("tabList").classList.add("active");
+    }
+}
 
-    <!-- WHATSAPP FLOATING CHOICE BUTTON -->
-    <div class="wa-float">
-        <button class="wa-main-btn" id="waMainBtn">WhatsApp पर संपर्क करें</button>
-        <div class="wa-popup" id="waPopup">
-            <div class="wa-popup-header">किस नंबर पर WhatsApp करें?</div>
-            <button class="wa-number-btn" data-wa="919454238343">WhatsApp – 9454238343</button>
-            <button class="wa-number-btn" data-wa="919569615494">WhatsApp – 9569615494</button>
-            <div class="wa-close" id="waClose">बंद करें</div>
-        </div>
-    </div>
+/* ------- LOCAL STORAGE HELPER ------- */
+function getSavedRecords() {
+    return JSON.parse(localStorage.getItem("savedRecords") || "[]");
+}
 
-    <!-- JAVASCRIPT -->
-    <script>
-        // नया Google Apps Script Web App URL
-    
+function saveRecord(aadhaar, mobile) {
+    const records = getSavedRecords();
+    records.push({ aadhaar: aadhaar, mobile: mobile });
+    localStorage.setItem("savedRecords", JSON.stringify(records));
+}
+
+/* ------- DUPLICATE CHECK FUNCTIONS ------- */
+function checkDuplicateAadhaar() {
+    const aadhaar = document.getElementById("aadhaar").value;
+    const msg = document.getElementById("aadhaarMsg");
+    msg.textContent = "";
+
+    if (aadhaar.length < 12) return false;
+
+    const records = getSavedRecords();
+    const exists = records.some(r => r.aadhaar === aadhaar);
+
+    if (exists) {
+        msg.textContent = "❌ यह आधार नंबर पहले से मौजूद है!";
+    }
+
+    return exists;
+}
+
+function checkDuplicateMobile() {
+    const mobile = document.getElementById("mobile").value;
+    const msg = document.getElementById("mobileMsg");
+    msg.textContent = "";
+
+    if (mobile.length < 10) return false;
+
+    const records = getSavedRecords();
+    const exists = records.some(r => r.mobile === mobile);
+
+    if (exists) {
+        msg.textContent = "❌ यह मोबाइल नंबर पहले से मौजूद है!";
+    }
+
+    return exists;
+}
+
+document.getElementById("aadhaar").addEventListener("input", checkDuplicateAadhaar);
+document.getElementById("mobile").addEventListener("input", checkDuplicateMobile);
+
+/* ------- FORM SUBMIT -> Apps Script + Sheet ------- */
+document.getElementById("vyaktiForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const aadhaar = document.getElementById("aadhaar").value;
+    const mobile  = document.getElementById("mobile").value;
+
+    const aadhaarExists = checkDuplicateAadhaar();
+    const mobileExists  = checkDuplicateMobile();
+
+    if (aadhaarExists || mobileExists) {
+        alert("❌ यह आधार/मोबाइल पहले से मौजूद है, दोबारा पंजीकरण नहीं किया जा सकता।");
+        return;
+    }
+
+    // Apps Script को भेजने वाला डेटा (Sheet वाले कॉलम के हिसाब से)
+    const payload = {
+        workerName: document.getElementById("workerName").value,
+        dob:        document.getElementById("dob").value,
+        aadhaar:    aadhaar,
+        mobile:     mobile,
+        tahsil:     document.getElementById("tehsil").value,
+        block:      document.getElementById("block").value,
+        pincode:    document.getElementById("pincode").value,
+        post:       document.getElementById("post").value,
+        panchayat:  document.getElementById("panchayat").value,
+        address:    document.getElementById("address").value,
+        applicantName:   document.getElementById("applicantName").value,
+        applicantMobile: document.getElementById("applicantMobile").value
+    };
+
+    try {
+        const res = await fetch(SCRIPT_URL, {
+            method: "POST",
+            body: JSON.stringify(payload),
+            headers: { "Content-Type": "application/json" }
+        });
+
+        const data = await res.json();
+        if (data.status === "success") {
+            saveRecord(aadhaar, mobile);
+            alert("✅ आपका  पंजीकरण कर लिया गया है  JALD HI APKE AADHAR PR OTP BHEJ KR AADHAR STYAPAN KIYA JAYEGA  THANKYOU");
+        } else {
+            alert("❌ Sheet में सेव करने में समस्या: " + (data.message || ""));
+        }
+    } catch (err) {
+        console.error(err);
+        alert("❌ सर्वर से कनेक्ट नहीं हो पाया। बाद में फिर कोशिश करें।");
+    }
+});
+
+/* ------- WHATSAPP DATA ------- */
+function getFormData() {
+    return (
+        "*व्यक्ति पंजीकरण विवरण*\n\n" +
+        "👤 नाम: " + workerName.value + "\n" +
+        "📅 जन्म तिथि: " + dob.value + "\n" +
+        "🪪 आधार नंबर: " + aadhaar.value + "\n" +
+        "📱 मोबाइल: " + mobile.value + "\n" +
+        "🏢 तहसील: " + tehsil.value + "\n" +
+        "🏘 ब्लॉक: " + block.value + "\n" +
+        "📮 पिनकोड: " + pincode.value + "\n" +
+        "🏤 पोस्ट: " + post.value + "\n" +
+        "🌐 पंचायत: " + panchayat.value + "\n" +
+        "📍 पता: " + address.value + "\n\n" +
+        "🙋‍♂️ आवेदक: " + applicantName.value + "\n" +
+        "📞 आवेदक मोबाइल: " + applicantMobile.value
+    );
+}
+
+function sendWhatsApp(number, btn) {
+    const aadhaarExists = checkDuplicateAadhaar();
+    const mobileExists  = checkDuplicateMobile();
+    if (aadhaarExists || mobileExists) {
+        alert("❌ यह आधार/मोबाइल पहले से मौजूद है, WhatsApp भेजने से पहले डेटा चेक करें।");
+        return;
+    }
+
+    btn.classList.add("loading");
+    btn.innerText = "Sending...";
+
+    setTimeout(() => {
+        const url = "https://wa.me/91" + number + "?text=" + encodeURIComponent(getFormData());
+        window.open(url, "_blank");
+        btn.classList.remove("loading");
+        btn.innerText = "WhatsApp पर भेजें (" + number + ")";
+    }, 800);
+}
+
+wa1.onclick = () => sendWhatsApp("9454238343", wa1);
+wa2.onclick = () => sendWhatsApp("9569615494", wa2);
+
+/* ------- आवेदन लिस्ट – Apps Script (CSV) से ------- */
+function loadListFromSheet() {
+    fetch(SHEET_CSV_URL)
+        .then(res => res.text())
+        .then(text => {
+            const rows = text.trim().split("\n");
+            const tbody = document.querySelector("#listTable tbody");
+            tbody.innerHTML = "";
+
+            // अगर पहली row header है और दिखानी है तो i=0 से शुरू कर सकते हैं
+            for (let i = 1; i < rows.length; i++) {
+                const cols = rows[i].split(",");
+
+                // हमारे Sheet में 13 कॉलम हैं, लेकिन HTML table में 8 ही दिखा रहे हैं
+                if (cols.length < 8) continue;
+
+                const tr = document.createElement("tr");
+
+                tr.innerHTML = `
+                    <td>${i}</td>
+                    <td>${cols[0]}</td>  <!-- workerName -->
+                    <td>${cols[1]}</td>  <!-- dob -->
+                    <td>${cols[2]}</td>  <!-- aadhaar -->
+                    <td>${cols[3]}</td>  <!-- mobile -->
+                    <td>${cols[9]}</td>  <!-- address (J column index 9) -->
+                    <td>${cols[10]}</td> <!-- applicantName -->
+                    <td>${cols[11]}</td> <!-- applicantMobile -->
+                `;
+
+                tbody.appendChild(tr);
+            }
+
+            if (rows.length <= 1) {
+                alert("शीट में कोई डेटा नहीं मिला।");
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            alert("लिस्ट लोड करने में समस्या आ रही है। Apps Script लिंक और पब्लिश सेटिंग चेक करें।");
+        });
+}
+</script>
+
+</body>
+    </html>
